@@ -117,15 +117,59 @@
         margin-bottom: 30px;
         width: 80%;
       }
+
+      .btn {
+        .cta-btn(2rem, 10px 0, 80%);
+
+        @media @mobile {
+          .cta-btn(2rem, 10px 0, 100%);
+          margin: auto;
+        }
+      }
     }
+  }
 
-    .btn {
-      .cta-btn(2rem, 10px 0, 80%);
 
-      @media @mobile {
-        .cta-btn(2rem, 10px 0, 100%);
+  .booking-section {
+    font-size: 1.6rem;
+    padding: 30px 0;
+    border-top: @border;
+
+    form {
+      max-width: 500px;
+      margin: auto;
+
+      .form-section {
+        .flex(wrap, space-evenly);
+
+        label {
+          margin: auto;
+          width: 33%;
+        }
+
+      }
+
+      input {
+        display: block;
         margin: auto;
+        min-width: 200px;
+        width: 30%;
+      }
+
+      input:nth-child(2) {
+        margin-top: 20px;
+      }
+
+
+      .form-btn {
+        .cta-btn(1.6rem, 10px 0, 0);
+
+        &:hover {
+          .changeColor(@font-color, @sandy-beach);
+        }
       }
     }
   }
 }// home
+
+

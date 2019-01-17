@@ -1,3 +1,18 @@
+@keyframes beat {
+  0% {
+    background-color: red;
+    padding: 2% 0;
+  }
+  50% {
+    background-color: orange;
+    padding: 5% 0;
+  }
+  100% {
+    background-color: red;
+    padding: 2% 0;
+  }
+}
+/* The element to apply the animation to */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -345,7 +360,7 @@ img {
     width: 80%;
   }
 }
-.home .content-pick .btn {
+.home .content-pick .destination .btn {
   background-color: #117a8b;
   border-radius: 10px;
   color: #FFFFFF;
@@ -355,7 +370,7 @@ img {
   width: 80%;
 }
 @media (max-width: 500px) {
-  .home .content-pick .btn {
+  .home .content-pick .destination .btn {
     background-color: #117a8b;
     border-radius: 10px;
     color: #FFFFFF;
@@ -365,4 +380,48 @@ img {
     width: 100%;
     margin: auto;
   }
+}
+.home .booking-section {
+  font-size: 1.6rem;
+  padding: 30px 0;
+  border-top: 2px dashed #C0C0C0;
+}
+.home .booking-section form {
+  max-width: 500px;
+  margin: auto;
+}
+.home .booking-section form .form-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.home .booking-section form .form-section label {
+  margin: auto;
+  width: 33%;
+}
+.home .booking-section form input {
+  display: block;
+  margin: auto;
+  min-width: 200px;
+  width: 30%;
+}
+.home .booking-section form input:nth-child(2) {
+  margin-top: 20px;
+}
+.home .booking-section form .form-btn {
+  background-color: #117a8b;
+  border-radius: 10px;
+  color: #FFFFFF;
+  font-size: 1.6rem;
+  padding: 10px 0;
+  text-align: center;
+  width: 0;
+}
+.home .booking-section form .form-btn:hover {
+  animation-name: morph;
+  animation-duration: 25s;
+  animation-iteration-count: infinite;
+  background-color: #FFEBCD;
+  color: #212529;
+  animation: beat 1s ease infinite;
 }
