@@ -1,1 +1,23 @@
-// Navigation Styles here
+header {
+    border-bottom: @border;
+    padding-bottom: 20px;
+    width: 100%;
+
+    div {
+        .flex(wrap, space-between);
+        margin: auto;
+        margin-top: 25px;
+        max-width: @max-width;
+        width: 100%;
+
+        nav {
+            .flex(nowrap, space-around);
+            align-items: center;
+            width: 43%;
+
+            a {
+                color: @font-color;
+            }
+        }
+    }
+}
