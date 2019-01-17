@@ -3,3 +3,13 @@
     flex-wrap: @wrap;
     justify-content: @justify;
 }
+
+.cta-btn(@font-size, @padding, @width) {
+    background-color: darken(@button-bg, 10%);
+    border-radius: 10px;
+    color: @main-bg;
+    font-size: @font-size;
+    padding: @padding;
+    text-align: center;
+    width: @width;
+}
