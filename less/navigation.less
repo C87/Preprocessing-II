@@ -1,1 +1,42 @@
-// Navigation Styles here
+.header {
+    border-bottom: @border;
+    padding-bottom: 20px;
+    width: 100%;
+
+    @media @mobile {
+        padding: 0 1% 5px;
+    }
+
+    div {
+        .flex(wrap, space-between);
+        margin: auto;
+        max-width: @max-width;
+        width: 100%;
+
+        @media @mobile {
+            display: block;
+            margin-top: 20px;
+
+          h1 {
+              font-size: 3rem;
+              margin: 20px 0 16px;
+              text-align: center;
+          }
+        }
+
+        .header-navigation {
+            .flex(nowrap, space-around);
+            align-items: center;
+            width: 43%;
+
+            @media @mobile {
+                .flex(nowrap, space-evenly);
+                width: 100%;
+            }
+
+            a {
+                color: @font-color;
+            }
+        }
+    }
+}

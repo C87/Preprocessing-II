@@ -1,1 +1,43 @@
-// Mixins in here
+.flex(@wrap, @justify) {
+    display: flex;
+    flex-wrap: @wrap;
+    justify-content: @justify;
+}
+
+.cta-btn(@font-size, @padding, @width) {
+    background-color: darken(@button-bg, 10%);
+    border-radius: 10px;
+    color: @main-bg;
+    font-size: @font-size;
+    padding: @padding;
+    text-align: center;
+    width: @width;
+}
+
+.changeColor(@color,  @background) {
+    animation-name: morph;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+    background-color: @background;
+    color: @color;
+}
+
+@keyframes beat {
+  0% {
+    background-color: red;
+    padding: 2% 0;
+  }
+  50% {
+    background-color: orange;
+    padding: 5% 0;
+  }
+  100% {
+    background-color: red;
+    padding: 2% 0;
+  }
+}
+  
+  /* The element to apply the animation to */
+  .changeColor(@color,  @background) {
+      animation: beat 1s ease infinite;
+  }

@@ -1,46 +1,97 @@
 .home {
 
+  @media @mobile {
+    padding: 0 5%;
+  }
+
+  .container-header {
+    border-bottom: @border;
+
+    img {
+        display: block;
+        margin: auto;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+  }
+
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
+    @media @mobile {
+      display: block;
+    }
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile {
+        padding-right: 0;
+        width: 100%;
+      }
     }
+
+    
 
     .img-content {
       width: 48%;
       padding-left: 1%;
 
+      @media @mobile {
+        padding-left: 0;
+        width: 100%;
+      }
+
       img {
         border-radius: 10px;
+
+        @media @mobile {
+          display: block;
+          height: auto;
+          width: 100%;
+        }
       }
     }
   }
 
   .inverse-content {
     padding-bottom: 30px;
-    border-bottom: 2px dashed @navigation-border;
+    border-bottom: @border;
 
     .text-content {
+      order: 1;
       padding-left: 1%;
       padding-right: 0;
+
+      @media @mobile {
+        padding-left: 0;
+      }
     }
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+
+      @media @mobile {
+        display: block;
+        height: auto;
+        padding-right: 0;
+        width: 100%;
+      }
     }
   }
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+
+    @media @mobile {
+      width: 100%;
+    }
 
     img {
       border-radius: 10px;
@@ -49,13 +100,76 @@
 
   .content-pick {
     padding-top: 30px;
-    border-top: 2px dashed @navigation-border;
+    border-top: @border;
     display: flex;
     justify-content: space-between;
+
+    @media @mobile {
+      display: block;
+    }
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      @media @mobile {
+        margin: auto;
+        margin-bottom: 30px;
+        width: 80%;
+      }
+
+      .btn {
+        .cta-btn(2rem, 10px 0, 80%);
+
+        @media @mobile {
+          .cta-btn(2rem, 10px 0, 100%);
+          margin: auto;
+        }
+      }
+    }
+  }
+
+
+  .booking-section {
+    font-size: 1.6rem;
+    padding: 30px 0;
+    border-top: @border;
+
+    form {
+      max-width: 500px;
+      margin: auto;
+
+      .form-section {
+        .flex(wrap, space-evenly);
+
+        label {
+          margin: auto;
+          width: 33%;
+        }
+
+      }
+
+      input {
+        display: block;
+        margin: auto;
+        min-width: 200px;
+        width: 30%;
+      }
+
+      input:nth-child(2) {
+        margin-top: 20px;
+      }
+
+
+      .form-btn {
+        .cta-btn(1.6rem, 10px 0, 0);
+
+        &:hover {
+          .changeColor(@font-color, @sandy-beach);
+        }
+      }
     }
   }
 }// home
+
+
